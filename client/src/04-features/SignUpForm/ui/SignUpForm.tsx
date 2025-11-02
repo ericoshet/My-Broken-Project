@@ -26,7 +26,6 @@ export default function SignUpForm(): JSX.Element {
       const { isValid, error } = UserValidate.validateSignup(dataForApi);
       if (!isValid) return alert(error);
 
-      console.log(dataForApi);
 
       dispatch(signupAsyncThunk(dataForApi));
       navigate("/");

@@ -40,7 +40,7 @@ export class UserApi {
     }
   }
 
-  static async refreshTokens(): Promise<IApiResponse<IUserToken>> {
+  static async refreshTokens(): Promise<IUserToken> {
     try {
       const { data } = await axiosInstance.get<IApiResponse<IUserToken>>(
         "/auth/refreshTokens"

@@ -27,7 +27,7 @@ export default function Navigation(): JSX.Element {
     <Navbar bg="light" data-bs-theme="light">
       <Container>
         <Navbar.Brand>
-          {status === "logged" ? `Привет, ${user?.name}` : `Привет, Гость`}
+          {user.status === "logged" ? `Привет, ${user?.name}` : `Привет, Гость`}
         </Navbar.Brand>
         <Nav className="me-auto">
           <NavLink to={CLIENT_ROUTES.MAIN_PAGE} className="nav-link">
