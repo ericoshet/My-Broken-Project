@@ -55,7 +55,7 @@ export const bookSlice = createSlice({
       })
       .addCase(getAllBooksThunk.rejected, (state, action) => {
         state.loading = false;
-        state.errorMessage = action.payload as string;
+        state.errorMessage = state.payload as string;
       })
 
       .addCase(createBookThunk.fulfilled, (state, action) => {
